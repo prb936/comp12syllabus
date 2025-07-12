@@ -1,20 +1,22 @@
 <html> 
 <head>
+<title> DBMS </title>
 <link rel="stylesheet" href="style.css" />
+<link rel="icon" href="icon.png"> <!-- provides an icon in the title, its cool -->
 </head>
 <body>
 <div class="parentcontainer">
 	<ul class="forthatulnavbar">
 	<br>
-		<li><a class="active" href="chap1.html">Chapter 1</a> </li>
+		<li><a class="active" href="index.html">1.DBMS</a> </li>
 		 <br>
 		<li><a href="chap2.html">Ch2:Soon! </a> </li>
 		<br>
 		<li><a href="chap3.html">Ch3:Soon!</a> </li>
 		<br>
-		<li><a href="chap4.html">Ch4:Soon! </a></li>
+		<li><a href="chap4.html">4.C-Program </a></li>
 		<br>
-		<li><a href="chap5.html">Ch5:Soon! </a></li>
+		<li><a href="chap4.html">Ch4:Soon! </a></li>
 		<br>
 		<li><a href="chap6.html"> Ch6:Soon! </a></li>
 		<br>
@@ -107,7 +109,7 @@
 	<dl>
 		<h3> <dt> Terminologies in Database </dt> </h3>
 	<dt> Table </dt>
-		<dd> In a well-designed database, each table stores data about a particular subject, such as employees or products. A table has records (rows) and fields (columns). </dd>
+		<dd>Each table stores data about a particular subject, such as employees or products. A table has records (rows) and fields (columns). </dd>
 	<dt> Field </dt>
 		<dd> Fields have different types of data, such as text, numbers, dates, and hyperlinks. Fields have different types of data, such as text, numbers, dates, and hyperlinks. </dd>
 	<dt> Record </dt>
@@ -123,8 +125,7 @@
 	</dl>			
 <h3>  Database Management System (DBMS) </h3>
 	<dd> Introduction: A database management system (DBMS) is a software package designed to define, manipulate,
-retrieve and manage data in a database. A DBMS generally manipulates the data itself, the data
-format, field names, record structure and file structure. It also defines rules to validate and
+retrieve and manage data in a database. It also defines rules to validate and
 manipulate this data. </dd>
 	<dd>
 	Advantages: 
@@ -177,9 +178,7 @@ In relational model, three key terms are heavily used such as relations, attribu
 	<dt> 1NF: First Normal Form</dt>
 		<dd> A table is in 1NF if it satisfies the following conditions:
 All columns contain atomic values (i.e., indivisible values).
-Each row is unique (i.e., no duplicate rows).
-Each column has a unique name.
-The order in which data is stored does not matter. </dd>
+Each row is unique (i.e., no duplicate rows). </dd>
 	<dt> 2NF: ELimating Partial Dependency</dt>
 		<dd> A relation is in 2NF if it satisfies the conditions of 1NF and additionally. No partial dependency exists, meaning every non-prime attribute (non-key attribute) must depend on the entire primary key, not just a part of it. </dd>
 	<dt> 3NF</dt>
@@ -188,7 +187,6 @@ The order in which data is stored does not matter. </dd>
 		<ol type="A">
 	<li>Reduces Data Redundancy: Duplicate data is stored efficiently, saving disk space and reducing inconsistency. </li>
 	<li>Improves Data Integrity: Ensures the accuracy and consistency of data by organizing it in a structured manner.
-	<li> Simplifies Database Design: By following a clear structure, database designs become easier to maintain and update.
 		</ol>
 
 	<dt> Disadvantages of Normalization: </dt>
@@ -233,9 +231,191 @@ The order in which data is stored does not matter. </dd>
 	<br>
 The role of DBA has evolved into a mission-critical function. A DBA in database management involves the installing, configuring, monitoring, maintaining, and improving the performance of databases and data stores, according to Skills Framework for the Information Age–SFIA 8. A solution architect may design the overall framework or structure of the databases, but the job of implementing and maintaining belongs to DBA roles. </dd>
 		</ol>
-
-
 </dl>
+<h3> Past Year Questions of DBMS </h3>
+   <dl>1. What is Database and DBMS? List out the advantages and disadvantages of DBMS.
+       <dd> <strong>Database:</strong> A collection of organized data that can be easily accessed, managed, and updated.<br>
+    <strong>DBMS:</strong> Database Management System is software that interacts with the database to store, retrieve, and manipulate data.<br><br>
+    <strong>Advantages:</strong><br>
+    - Reduces data redundancy<br>
+    - Ensures data integrity<br>
+    - Provides data security<br>
+    - Allows multi-user access<br><br>
+    <strong>Disadvantages:</strong><br>
+    - Can be expensive<br>
+    - Requires technical staff<br>
+    - System failure may lead to data loss </dd> 
+   </dl>
+ <dl>2. Differentiate between file processing system and DBMS. Give at least four points.
+   <dd>
+    <strong>File Processing System vs DBMS:</strong><br>
+    1. <strong>Data Redundancy:</strong> High in file system; minimized in DBMS<br>
+    2. <strong>Data Access:</strong> Manual and slow in file system; fast and flexible in DBMS<br>
+    3. <strong>Security:</strong> Poor in file system; strong in DBMS<br>
+    4. <strong>Data Integrity:</strong> Hard to enforce in file system; maintained in DBMS
+  </dd>
+  </dl>
+ <dl>
+  <dt>3. Explain the different models of DBMS with advantages and disadvantages.</dt>
+  <dd>
+    <strong>Hierarchical Model:</strong> Data is organized in a tree structure.<br>
+    + Fast access<br>
+    − Complex to manage<br><br>
+    <strong>Network Model:</strong> Uses a graph structure with multiple relationships.<br>
+    + Flexible<br>
+    − Complicated design<br><br>
+    <strong>Relational Model:</strong> Data stored in tables (relations).<br>
+    + Easy to use<br>
+    − Slower with large datasets<br><br>
+    <strong>Object-Oriented Model:</strong> Combines object-oriented programming and DBMS.<br>
+    + Handles complex data<br>
+    − Less popular and harder to implement
+  </dd>
+
+  <dt>4. What is a relational database? How is it different from other database models?</dt>
+  <dd>
+    A relational database stores data in tables with rows and columns. It uses keys to relate data.<br>
+    <strong>Difference:</strong> Unlike hierarchical or network models, it offers simplicity, flexibility, and SQL support for querying.
+  </dd>
+
+  <dt>5. What is data redundancy? How does DBMS help in reducing it?</dt>
+  <dd>
+    <strong>Data Redundancy:</strong> Duplication of the same data in multiple places.<br>
+    <strong>DBMS:</strong> Reduces redundancy by organizing data in related tables and eliminating unnecessary duplication through normalization.
+  </dd>
+
+  <dt>6. Write differentiate between centralized and distributed database systems.</dt>
+  <dd>
+    <strong>Centralized DB:</strong> All data stored at one location.<br>
+    <strong>Distributed DB:</strong> Data is stored at multiple locations.<br><br>
+    <strong>Key Differences:</strong><br>
+    - Centralized is easier to manage; distributed is more fault-tolerant<br>
+    - Centralized has slower access for remote users; distributed is faster for local users<br>
+    - Distributed is more complex than centralized
+  </dd>
+
+  <dt>7. Who is Database Administrator (DBA)? What are the major responsibilities of DBA?</dt>
+  <dd>
+    A DBA is a person responsible for managing and maintaining the database system.<br>
+    <strong>Responsibilities:</strong><br>
+    - Installing and upgrading DBMS<br>
+    - Ensuring data security<br>
+    - Managing backups and recovery<br>
+    - Monitoring performance
+  </dd>
+
+  <dt>8. Define normalization. Explain 1NF, 2NF and 3NF with suitable examples. Explain the normalization process with examples.</dt>
+  <dd>
+    <strong>Normalization:</strong> Process of organizing data to reduce redundancy.<br><br>
+    <strong>1NF:</strong> No repeating groups; each field holds atomic value.<br>
+    <em>Example:</em> Split phone numbers into separate rows.<br><br>
+    <strong>2NF:</strong> No partial dependency; all non-key attributes depend on the whole primary key.<br>
+    <em>Example:</em> Split course and student info from enrollment.<br><br>
+    <strong>3NF:</strong> No transitive dependency; non-key attributes depend only on the primary key.<br>
+    <em>Example:</em> Move department name to a separate table linked by dept_id.
+  </dd>
+
+  <dt>9. Explain the terms: primary key, foreign key, and candidate key with examples.</dt>
+  <dd>
+    <strong>Primary Key:</strong> Uniquely identifies each record. <br>
+    <em>Example:</em> student_id in a Students table<br><br>
+    <strong>Foreign Key:</strong> Links two tables. <br>
+    <em>Example:</em> dept_id in Students referencing Departments table<br><br>
+    <strong>Candidate Key:</strong> All possible unique keys. <br>
+    <em>Example:</em> student_id and email can both be candidate keys
+  </dd>
+
+  <dt>10. What is SQL? Explain its components and common functions.</dt>
+  <dd>
+    <strong>SQL:</strong> Structured Query Language used to manage data in a relational database.<br><br>
+    <strong>Components:</strong><br>
+    - DDL (Data Definition): CREATE, DROP<br>
+    - DML (Data Manipulation): INSERT, UPDATE, DELETE<br>
+    - DCL (Control): GRANT, REVOKE<br>
+    - TCL (Transaction): COMMIT, ROLLBACK<br><br>
+   Functions: COUNT(), SUM(), AVG(), MAX(), MIN()
+  </dd>
+</dl>
+<h3> SQL commands to perform the following operations: </h3>
+	<dl>
+ <dt> a. Create a table named students with the fields: Id, Name, Class, and Marks.
+	<dd class="programs">
+	 CREATE TABLE students( <br>
+	  &nbsp;&nbsp;StudentID int PRIMARY KEY AUTO_INCREMENT, <br>
+	  &nbsp;&nbsp;Name varchar(50),<br>
+	  &nbsp;&nbsp;Class int, <br>
+	  &nbsp;&nbsp;Marks bigint ); 
+	 </dd>
+	<br> <img src="tablecreate.png"> </img> 
+</dt> 
+   
+  <dt> b. Insert records into the students table with appropriate values.
+	<dd class='programs'>
+	INSERT INTO students(name, class, marks) <br>
+&nbsp;&nbsp;VALUES('Issac Newton', 11, 84), <br>
+&nbsp;&nbsp;('Anita Joshi', 12, 60), <br>
+&nbsp;&nbsp;('Fredrick Neitzche', 10, 80);
+	</dd>
+	<br> <img src=" values.png">  </img>
+</dt>
+
+<dt> c. Display all records from the students table.
+	<dd class="programs">
+	SELECT * FROM students;
+	</dd>
+<br> <img src="display.png"> </img>
+</dt>
+
+<dt> d. Update the marks of a student whose name is 'Anita' to 85.
+	<dd class="programs">
+	UPDATE Students <br>
+	&nbsp;SET Marks='80' WHERE Name LIKE 'Anita%'; 
+	</dd>
+<br> <img src='anita.png'> </img>
+</dt>
+
+<dt> e. Delete the record of the student with id = 3
+	<dd class="programs"> 
+	DELETE FROM students; <br>
+	&nbsp;WHERE StudentID = '3';
+	</dd>
+<br> <img src='d1.png'> </img>
+	</dt> 
+	</dl>
+	
+	
+<h3> Definition of terms: </h3>
+<dl>
+<dt>a. Data Dictionary</dt>
+<dd>A data dictionary is a centralized repository that stores metadata—information about data such as names, types, sizes, and relationships—in a database system.</dd>
+
+<dt>b. Primary Key</dt>
+<dd>A primary key is a unique identifier for each record in a table. It ensures that no two rows have the same value in the key column(s).</dd>
+
+<dt>c. Relationship</dt>
+<dd>A relationship in DBMS defines how data in one table is linked to data in another, often using keys to maintain data consistency across tables.</dd>
+
+<dt>d. Data Manipulation Language (DML)</dt>
+<dd>DML is a subset of SQL used to insert, update, delete, and retrieve data within a database.</dd>
+
+<dt>e. Structured Query Language (SQL)</dt>
+<dd>SQL is a standard programming language used to manage and manipulate relational databases.</dd>
+
+<dt>f. Data Integrity</dt>
+<dd>Data integrity refers to the accuracy, consistency, and reliability of data throughout its lifecycle in a database.</dd>
+
+<dt>g. Data Definition Language (DDL)</dt>
+<dd>DDL is a subset of SQL used to define and manage database structures like tables, schemas, and indexes.</dd>
+
+<dt>h. Data Security</dt>
+<dd>Data security in DBMS involves protecting data from unauthorized access, loss, or corruption through access control and encryption.</dd>
+
+<dt>i. Database System</dt>
+<dd>A database system consists of the database, DBMS software, and related tools that together store, manage, and provide access to data efficiently.</dd>
+</dl>
+
+	
+
 </body>
 	</html>
 	

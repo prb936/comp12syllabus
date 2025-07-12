@@ -1,0 +1,316 @@
+<html> 
+<head>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="icon.png">
+<title> C-Program </title>
+</head>
+<body>
+<div class="parentcontainer">
+	<ul class="forthatulnavbar">
+	<br>
+		<li><a href="index.html">1.DBMS</a> </li>
+		 <br>
+		<li><a href="chap2.html">Ch2:Soon! </a> </li>
+		<br>
+		<li><a href="chap3.html">Ch3:Soon!</a> </li>
+		<br>
+		<li><a class="active" href="chap4.html">4.C-Program</a></li>
+		<br>
+		<li><a href="chap5.html">Ch5:Soon! </a></li>
+		<br>
+		<li><a href="chap6.html"> Ch6:Soon! </a></li>
+		<br>
+	    <li><a href="chap7.html"> Ch7:Soon! </a></li>
+		<br>
+		 <li><a href="chap8.html"> Ch8:Soon! </a></li>
+		 <br>
+		 <li><a href="about.html"> About    </a></li> <br>
+		</ul>
+<div  class="bodychildcontainer">
+<div class="head">	
+<h1>1. Programming in C </h1>
+</div>
+<h3> Working with a function </h3>
+<dt>1a. Define Function</dt>
+<dd>A function is a self-contained block of code designed to perform a specific task when called in a program.</dd>
+
+<dt>1b. Syntax of Functions</dt>
+<dd>The basic syntax of a function includes a return type, function name, parameter list, and a body enclosed in braces.</dd>
+
+<dt>1c. Types of Functions</dt>
+<dd>Functions are mainly classified into library functions (predefined) and user-defined functions (created by the programmer).</dd>
+
+<dt>1d. Components of Function</dt>
+<dd>Functions consist of several components that define and execute them.</dd>
+
+<dt>i. Function Prototype</dt>
+<dd>A function prototype declares the function name, return type, and parameters before its actual definition.</dd>
+<dt>ii. Function Call</dt>
+<dd>A function call is used to execute the function by using its name followed by parentheses.</dd>
+ 
+<dt>iii. Function Definition</dt>
+<dd>The function definition provides the actual code that is executed when the function is called.</dd>
+
+<dt>iv. Return Type</dt>
+<dd>The return type specifies the type of value a function will return to the caller.</dd>
+<h3>2. Categories of Function</h3>
+<dd>Functions can be categorized based on whether they take arguments and return values.</dd>
+
+<dt>i. Function with Return Type but No Arguments</dt>
+<dd>These functions return a value but do not take any parameters.</dd>
+ <dd class="programs">
+ //p1:return type with no arguments
+<br>
+#include &ltstdio.h&gt <br>
+int ret(); <br>
+
+int main()<br>
+{ int a=ret();<br>
+printf("Your lucky number: %d \n",a);<br>
+printf("Executed by Pratik Raj Bista");<br>
+    return 0;<br>
+}<br>
+int ret()<br>
+{<br>
+ return 36;<br>
+}
+ </dd>
+ <br> <img src="1.png"> </img>
+ 
+ 
+<dt>ii. Function with Return Type with Arguments</dt>
+<dd>These functions take parameters and return a value after processing.</dd>
+<dd class="programs"> 
+//p2: return type with arguments
+<br>
+#include &ltstdio.h&gt <br>
+int multi(int ,int);<br>
+int main()<br>
+{<br>
+int a=25, b=25, m;<br>
+    m = multi(a,b);<br>
+    printf("%d * %d = %d \n", a,b, m);  <br>
+    printf("Executed by Pratik Raj Bista");<br>
+    return 0;<br>
+}<br>
+int multi(int x,int y)<br>
+{<br>
+ return(x*y);<br>
+}<br>
+
+</dd>
+<br> <img src="2.png"> </img>
+
+
+<dt>iii. Function with No Return Type with No Arguments</dt>
+<dd>These functions do not take parameters and do not return a value.</dd>
+<dd class="programs"> 
+//p3: no return type and no arguments <br>
+#include &ltstdio.h&gt							<br>
+void happy(void);	<br>				
+int main()<br>
+{<br>
+char confirm;<br>
+printf("Is today your birthday?y/n:");<br>
+    scanf("%c", &confirm);<br>
+    if (confirm=='y')<br>
+    {<br>
+    happy();<br>
+    }<br>
+    else<br>
+    {printf("Aw well, then good day sir/madam");}<br>
+printf("\nExecuted by Pratik Bista");<br>
+return 0;<br>
+}<br>
+void happy()<br>
+{<br>
+printf("Happy birthday to you \n");<br>
+printf("Happy birthday to you \n");<br>
+printf("Happy birthday dear reader \n");<br>
+printf("Happy birthday to you");<br>
+}<br>
+</dd>
+<br> <img src="3.png"> </img>
+
+
+<dt>iv. Function with No Return Type with Arguments</dt>
+<dd>These functions take parameters but do not return any value.</dd>
+ <dd class="programs">
+	//p4: no return type with arguments
+<br>
+#include<stdio.h><br>
+void ntype(int);<br>
+int main()<br>
+{<br>
+    int n;<br>
+printf("Gimme any number:");<br>
+    scanf("%d", &n);<br>
+ ntype(n);<br>
+printf("\nExecuted by Pratik Raj Bista");<br>
+return 0;<br>
+}<br>
+void ntype(int num)<br>
+{<br>
+    if(num % 2 ==0)<br>
+    {printf("It is even");}<br>
+    else<br>
+    {printf("It is odd");}<br>
+}<br>
+ </dd>
+ <br> <img src="4.png"> </img>
+ 
+ 
+<h3>3. Storage Classes</h3>
+<dd>Storage classes define the scope, lifetime, and visibility of variables in a program.</dd>
+
+<dt>i. Automatic</dt>
+<dd>Automatic variables are the default local variables created inside functions and destroyed when the function ends.</dd>
+
+<dt>ii. External</dt>
+<dd>External variables are declared outside all functions and can be accessed by any function in the program.</dd>
+
+<dt>iii. Register</dt>
+<dd>Register variables are stored in CPU registers for faster access but are limited in number.</dd>
+
+<dt>iv. Static</dt>
+<dd>Static variables retain their value between multiple function calls and have a local scope.</dd>
+
+
+
+<h3>4. Recursive Function with Syntax and Examples</h3>
+<dd>A recursive function is a function that calls itself directly or indirectly to solve a problem by breaking it into smaller subproblems.</dd>
+<dd class="programs">
+//p_a:Recursion<br>
+#include&ltstdio.h&gt<br>
+int factorial(int);<br>
+int main()<br>
+{ int num;<br>
+printf("Enter a number:");<br>
+scanf("%d", &num);<br>
+    printf("Factorial of the number %d is %d", num, factorial(num));<br>
+    printf("\n By Pratik Raj Bista");<br>
+return 0;<br>
+}<br>
+int factorial(int n)<br>
+{<br>
+if(n==0 || n==1)<br>
+    {return 1;}<br>
+else<br>
+    return n * factorial(n-1);<br>
+}
+
+</dd>
+<br><img src="rec_a.png" </img>
+<dd class="programs">
+//p_b:Recursion<br>
+<!-- Side note: nbsp for adding space in the back -->
+&nbsp;#include&ltstdio.h&gt<br>
+&nbsp;&nbsp;int sum(int n)<br>
+&nbsp;    {<br>
+    &nbsp;&nbsp;&nbsp;if (n==0)<br>
+&nbsp;&nbsp;    {return 0;}<br>
+  &nbsp;&nbsp;&nbsp;  else<br>
+  &nbsp;&nbsp;  return n+sum(n-2);<br>
+  &nbsp;  }<br>
+   
+  &nbsp;   &nbsp; int main()<br>
+  &nbsp; { int even;<br>
+  &nbsp; printf("Please enter any even number:");<br>
+    &nbsp;   scanf("%d", & even);<br>
+  &nbsp;   &nbsp; printf("Sum of even numbers from 0 to %d is:%d", even, sum(even));<br>
+  &nbsp;   &nbsp; printf("\n Written by prb");<br>
+  &nbsp; return 0;<br>
+  }
+</dd>
+<br><img src="rec_b.png" </img>
+<h2> Demonstration of passing array to a function</h2>
+<h4> Examples: </h4>
+<dd class="programs">
+	// passing array to a function <br>
+//p1: display 3x3 matrix <br>
+
+#include<stdio.h>
+void matrixinput(int [][3]); <br>//disclose no of dimensions except for the first one
+<brvoid matrixprint(int [][3]);
+void matrixprint(int a[3][3])
+{	<br>
+    int i,j;<br>
+    for(i=0; i<3; i++)<br>
+    {<br>
+        for(j=0;j<3; j++)<br>
+        {<br>
+        printf("%d \t", a[i][j]);
+        }
+    printf("\n");<br>
+    }
+}
+void matrixinput(int a[3][3])<br>
+{<br>
+    int i,j;<br>
+    for(i=0; i<3; i++)<br>
+    { printf("For row no. %d: \n", i+1);<br>
+        for(j=0;j<3; j++)<br>
+        {<br>
+        printf("Column %d:", j+1);<br>
+        scanf("%d", &a[i][j]);<br>
+        }
+    }
+}
+<br>
+int main()<br>
+{ int i,j, array[3][3];<br>
+      matrixinput(array);<br>
+      matrixprint(array);<br>
+    printf("\n Executed by Pratik Raj Bista");<br>
+return 0;<br>
+}
+</dd>
+<br> <img src="array1.png"> </img>
+<br> <br>
+<dd class="programs">
+// passing array to a function <br>
+//p2: display sum of 3x3 matrix<br>
+#include<stdio.h><br>
+void input(int [][3]);<br>
+
+void sum(int [][3], int [][3], int [][3]);<br>
+
+void sum(int s[][3], int a[][3],int b[][3])<br>
+{<br>
+for (int i=0;i<3;i++) <br>
+    {<br>
+        for (int j=0;j<3;j++){ <br>
+            s[i][j]= a[i][j]+b[i][j];<br>
+            printf("%d \t",s[i][j]);<br>
+        }<br>
+        printf("\n");<br>
+    }
+}
+
+void input(int in[][3])<br>
+{<br>
+for (int i=0;i<3;i++)<br>
+    { printf("Row no: %d \n", i+1);<br>
+        for (int j=0;j<3;j++){<br>
+            printf("Column no %d:", j+1);<br>
+            scanf("%d", &in[i][j]);<br>
+        }
+    }
+}
+<br>
+int main()<br>
+{<br>
+    int matrix1[3][3], matrix2[3][3], t[3][3];<br>
+    printf("For matrix1 \t");<br>
+    input(matrix1);<br>
+     printf("For matrix2 \t");<br>
+    input(matrix2);<br>
+    sum(t,matrix1,matrix2);<br>
+/* NOTE:  sum(t,input(matrix1),input(matrix2)); DOESNT work, bc input is a void function,
+          so there is no value for sum() function to get when it is called */
+<br>
+printf("Executed after a very tedious hour by Pratik Raj Bista");<br>
+return 0;<br>
+}
+</dd>
+<br> <img src="array2.png"> </img>
